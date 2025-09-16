@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App With JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="search-box">
+                <input type="text" placeholder="Enter your Location" class="input-box">
+                <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+            </div>
+        </div>
+        <div class="weather-body">
+            <img src="\assets\cloud.png" alt="Weather" class="Weather-image">
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/2e770fadbd.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+css:
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(23, 33, 42);
+}
+.container{
+    width: 400px;
+    height: min-content;
+    background-color: rgb(64, 126, 126);
+    border-radius: 12px;
+    padding: 28px;
+}
+.search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-box{
+    width: 85%;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 8px; 
+    padding: 10px;   
+    text-transform: capitalize;
+}
+#searchBtn{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+#searchBtn button:hover{
+    color: #fff;
+    background-color: #ababab;
+}
