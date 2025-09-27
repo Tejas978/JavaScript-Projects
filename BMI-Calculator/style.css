@@ -1,0 +1,9 @@
+/* Use the Inter font family */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom transition for smoother updates */
+#result-container > * {
+    transition: all 0.3s ease-in-out;
+}
