@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+     /* padding: 0; */
+} 
+.boxes1{
+    height: 50px;
+    width: 300px;
+    font-size: 20px;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    /* margin-top: 10px; */
+    background-color: aliceblue;
+}
+.boxes{
+    height: 110px;
+    width: 110px;
+}
+#box{
+    position: relative;
+    bottom: 50px;
+    margin-top: 10px;
+    display: flex; 
+    gap: 35px;
+    justify-self: center;
+
+    
+}
+#main{
+    text-align: center;
+    margin-top: 150px;
+    
+}
+#text{
+    font-size: 50px;
+    position: relative;
+    bottom: 70px;
+}
+.end{
+    font-size: 30px;
+    position: relative;
+    bottom: 20px;
+}
+.boxes{
+    border: 2px solid black;
+    cursor: pointer;}
+.box1{
+    color: aqua;
+    background-color: aqua;
+}
+#red {
+    background-color: red; /* Change color of box1 */
+}
+
+#blue {
+    background-color: blue; /* Change color of box2 */
+}
+
+#green {
+    background-color: green; /* Change color of box3 */
+}
+
+#yellow {
+    background-color: yellow; /* Change color of box4 */
+}
+
