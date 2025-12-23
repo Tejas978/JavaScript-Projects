@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FocusX</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container max-w-lg p-6">
+    <div class="glass-card p-8 flex flex-col items-center">
+
+        <h1 class="text-3xl font-bold mb-8 tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+            FocusX
+        </h1>
+
+        <!-- Mode Buttons -->
+        <div class="flex gap-2 mb-10 w-full justify-center">
+            <button onclick="setMode('work')" id="work-btn" class="mode-btn active px-4 py-2 rounded-full border border-white/10 text-sm">
+                WORK
+            </button>
+            <button onclick="setMode('short')" id="short-btn" class="mode-btn px-4 py-2 rounded-full border border-white/10 text-sm">
+                SHORT BREAK
+            </button>
+            <button onclick="setMode('long')" id="long-btn" class="mode-btn px-4 py-2 rounded-full border border-white/10 text-sm">
+                LONG BREAK
+            </button>
+        </div>
+
+        <!-- Timer -->
+        <div class="relative flex items-center justify-center mb-10" id="timer-container">
+            <svg class="w-64 h-64">
+                <circle class="text-white/5" stroke-width="8" stroke="currentColor" fill="transparent" r="120" cx="128" cy="128"/>
+                <circle id="progress-ring" class="progress-ring__circle" stroke-width="8"
+                        stroke-dasharray="753.98" stroke-dashoffset="0"
+                        stroke-linecap="round" fill="transparent"
+                        r="120" cx="128" cy="128"/>
+            </svg>
+
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <span id="timer-text" class="timer-display text-6xl font-bold">25:00</span>
+                <span id="status-text" class="text-xs tracking-widest opacity-50 mt-2 uppercase">Ready</span>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex gap-4 mb-8">
+            <button id="start-btn" onclick="toggleTimer()" class="btn-neon border border-cyan-400 px-8 py-3 rounded-lg text-cyan-400">
+                START
+            </button>
+            <button onclick="resetTimer()" class="hover:bg-white/10 border border-white/20 px-8 py-3 rounded-lg text-white">
+                RESET
+            </button>
+        </div>
+
+        <!-- Task -->
+        <div class="w-full mt-4 pt-6 border-t border-white/10">
+            <input id="task-input" type="text"
+                   placeholder="What are you focusing on?"
+                   class="task-input bg-transparent border-b border-white/20 w-full py-2 text-center text-lg placeholder:text-white/20">
+
+            <div id="message-box"
+                 class="hidden mt-4 p-3 rounded-lg bg-cyan-500/10 text-cyan-400 text-center text-sm border border-cyan-500/20">
+                Time to take a break!
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>

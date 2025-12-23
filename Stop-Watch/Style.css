@@ -1,0 +1,74 @@
+:root {
+    --primary: #00f2ff;
+    --secondary: #7000ff;
+    --bg: #050505;
+}
+
+body {
+    background-color: var(--bg);
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(112, 0, 255, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(0, 242, 255, 0.15) 0%, transparent 40%);
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+}
+
+.timer-display {
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+}
+
+.progress-ring__circle {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.35s;
+    stroke: var(--primary);
+    filter: drop-shadow(0 0 8px var(--primary));
+}
+
+.btn-neon {
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.btn-neon:hover {
+    background: var(--primary);
+    color: #000;
+    box-shadow: 0 0 20px var(--primary);
+}
+
+.mode-btn.active {
+    background: rgba(0, 242, 255, 0.2);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.task-input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--primary);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.timer-active .timer-display {
+    animation: pulse 2s infinite;
+}
